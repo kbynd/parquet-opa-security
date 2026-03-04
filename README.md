@@ -62,7 +62,7 @@ spark = SparkSession.builder.master('local[2]').appName('demo').getOrCreate()
 install_opa_plugin(spark)
 
 # APAC analyst — sees only APAC, no PHI
-set_user_context('kalyan@co.com', ['analyst', 'apac_reader'], 'IN')
+set_user_context('kbynd@co.com', ['analyst', 'apac_reader'], 'IN')
 df = spark.read.parquet('/tmp/secured/customers.parquet')
 df.show()
 
