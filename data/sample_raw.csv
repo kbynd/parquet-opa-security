@@ -1,0 +1,9 @@
+customer_id,name,email,annual_salary,region,health_condition,department
+C001,Alice Smith,alice@example.com,95000,APAC,,Engineering
+C002,Bob Jones,bob@example.com,120000,EMEA,,Finance
+C003,Carol Lee,carol@example.com,85000,AMER,Diabetes,HR
+C004,David Kim,david@example.com,110000,APAC,,Engineering
+C005,Eve Patel,eve@example.com,75000,EMEA,,Marketing
+C006,Frank Wu,frank@example.com,200000,APAC,Hypertension,Executive
+C007,Grace Chen,grace@example.com,90000,AMER,,Engineering
+C008,Hiro Tanaka,hiro@example.com,130000,APAC,,Finance

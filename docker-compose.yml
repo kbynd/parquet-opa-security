@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  opa:
+    image: openpolicyagent/opa:latest-rootless
+    ports:
+      - "8181:8181"
+    command: run --server --log-level=debug /policies
+    volumes:
+      - ./policies:/policies
