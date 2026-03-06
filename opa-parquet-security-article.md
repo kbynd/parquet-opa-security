@@ -324,7 +324,7 @@ That's a different class of guarantee than anything the catalog-centric approach
 
 ## Getting Started
 
-The full prototype — characterization pipeline, OPA policy, Spark plugin, and test suite — is available at [github link].
+The full prototype — characterization pipeline, OPA policy, Spark plugin, and test suite — is available at https://github.com/kbynd/parquet-opa-security.
 
 ```bash
 # Start OPA
