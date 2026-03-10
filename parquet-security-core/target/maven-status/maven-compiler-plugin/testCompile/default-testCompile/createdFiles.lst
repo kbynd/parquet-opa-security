@@ -1,0 +1,7 @@
+io/parquet/security/dimensions/BitmapDerivationTest.class
+io/parquet/security/opa/OpaSecurityPolicyProviderTest.class
+io/parquet/security/dimensions/SecurityDimensionsExample.class
+io/parquet/security/IntegrationTest.class
+io/parquet/security/PermittedMaskTest.class
+io/parquet/security/dimensions/SecurityDimensionsRegistryTest.class
+io/parquet/security/GroupSecurityColumnExtractorTest.class

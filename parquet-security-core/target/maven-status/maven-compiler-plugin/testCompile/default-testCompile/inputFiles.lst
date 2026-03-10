@@ -1,0 +1,7 @@
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/opa/OpaSecurityPolicyProviderTest.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/IntegrationTest.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/dimensions/BitmapDerivationTest.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/PermittedMaskTest.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/dimensions/SecurityDimensionsExample.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/GroupSecurityColumnExtractorTest.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/test/java/io/parquet/security/dimensions/SecurityDimensionsRegistryTest.java

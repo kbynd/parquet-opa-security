@@ -1,0 +1,10 @@
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/PermittedMask.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/opa/OpaSecurityPolicyProvider.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/SecuredParquetReader.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/GroupSecurityColumnExtractor.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/SecurityColumnExtractor.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/SecurityPolicyProvider.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/dimensions/SecurityDimensionsRegistry.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/UserContext.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/dimensions/ColumnSecurityMetadata.java
+/Users/kalyan/projects/parquet-opa-security/parquet-security-core/src/main/java/io/parquet/security/dimensions/BitmapDerivation.java

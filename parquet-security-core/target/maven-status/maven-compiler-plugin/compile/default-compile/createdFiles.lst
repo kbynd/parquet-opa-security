@@ -1,0 +1,12 @@
+io/parquet/security/PermittedMask.class
+io/parquet/security/GroupSecurityColumnExtractor.class
+io/parquet/security/dimensions/SecurityDimensionsRegistry.class
+io/parquet/security/SecurityColumnExtractor.class
+io/parquet/security/dimensions/BitmapDerivation.class
+io/parquet/security/SecuredParquetReader$FilteringStats.class
+io/parquet/security/UserContext.class
+io/parquet/security/SecuredParquetReader.class
+io/parquet/security/opa/OpaSecurityPolicyProvider.class
+io/parquet/security/SecurityPolicyProvider.class
+io/parquet/security/dimensions/BitmapDerivation$SecurityBitmap.class
+io/parquet/security/dimensions/ColumnSecurityMetadata.class
