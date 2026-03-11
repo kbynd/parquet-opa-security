@@ -49,3 +49,32 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Scala/SBT
+*.log
+.cache
+.history
+.lib/
+project/boot/
+project/plugins/project/

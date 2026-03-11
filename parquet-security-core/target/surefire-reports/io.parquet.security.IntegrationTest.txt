@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: io.parquet.security.IntegrationTest
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0 s -- in io.parquet.security.IntegrationTest
