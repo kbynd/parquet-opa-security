@@ -112,6 +112,13 @@
                         --add-opens java.base/java.util=ALL-UNNAMED
                         --add-opens java.base/javax.security.auth=ALL-UNNAMED
                     </argLine>
+                    <systemPropertyVariables>
+                        <hadoop.home.dir>${project.build.directory}/hadoop</hadoop.home.dir>
+                        <hadoop.security.authentication>simple</hadoop.security.authentication>
+                    </systemPropertyVariables>
+                    <environmentVariables>
+                        <HADOOP_HOME>${project.build.directory}/hadoop</HADOOP_HOME>
+                    </environmentVariables>
                 </configuration>
             </plugin>
         </plugins>
