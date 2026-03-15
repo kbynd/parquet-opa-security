@@ -148,7 +148,7 @@ public class CharacterizationExample {
         // For demonstration, add some sample metadata
         // In reality, this would be stored in the Parquet file's key-value metadata
         metadata.put("column.email.security.sensitivity", "internal");
-        metadata.put("column.email.security.regulatory", "pii,gdpr");
+        metadata.put("column.email.security.regulatory", "pii");
         metadata.put("column.salary.security.sensitivity", "confidential");
         metadata.put("column.salary.security.regulatory", "pii,financial");
         metadata.put("column.region.security.geographic", "value_based");

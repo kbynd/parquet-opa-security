@@ -56,11 +56,11 @@ public class SecurityDimensionsExample {
                 "auto"
         ));
 
-        // email: internal, pii+gdpr, customer_data
+        // email: internal, pii, customer_data
         columnMetadata.put("email", new ColumnSecurityMetadata(
                 "email",
                 "internal",
-                Arrays.asList("pii", "gdpr"),
+                Arrays.asList("pii"),
                 Collections.emptyList(),
                 false,
                 Collections.emptyList(),
@@ -112,7 +112,7 @@ public class SecurityDimensionsExample {
         System.out.println();
         System.out.println("Access requirements:");
         System.out.println("  - Sensitivity: internal or higher");
-        System.out.println("  - Regulatory: pii AND gdpr clearances required");
+        System.out.println("  - Regulatory: pii clearance required");
         System.out.println("  - Geographic: apac access (or global)");
     }
 
@@ -282,7 +282,7 @@ public class SecurityDimensionsExample {
         columnMetadata.put("email", new ColumnSecurityMetadata(
                 "email",
                 "internal",
-                Arrays.asList("pii", "gdpr"),
+                Arrays.asList("pii"),
                 Collections.emptyList(),
                 false,
                 Arrays.asList("analytics"),
@@ -363,7 +363,7 @@ public class SecurityDimensionsExample {
 
         System.out.println("Key observations:");
         System.out.println("  - Sensitivity uses HIGHEST level (confidential from salary)");
-        System.out.println("  - Regulatory ACCUMULATES (pii, gdpr, financial)");
+        System.out.println("  - Regulatory ACCUMULATES (pii, financial)");
         System.out.println("  - Geographic from region VALUE (APAC)");
         System.out.println("  - Purpose ACCUMULATES (analytics, operations)");
         System.out.println("  - DataType ACCUMULATES (customer_data, employee_data)");

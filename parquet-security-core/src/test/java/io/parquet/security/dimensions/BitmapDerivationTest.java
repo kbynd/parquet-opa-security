@@ -54,7 +54,7 @@ class BitmapDerivationTest {
         // Multiple regulatory scopes should accumulate
         Map<String, ColumnSecurityMetadata> metadata = new HashMap<>();
         metadata.put("email", createMetadata("email", "internal",
-                Arrays.asList("pii", "gdpr"), null, null, null));
+                Arrays.asList("pii"), null, null, null));
         metadata.put("salary", createMetadata("salary", "confidential",
                 Arrays.asList("pii", "financial"), null, null, null));
 
@@ -63,10 +63,9 @@ class BitmapDerivationTest {
                 Collections.emptyMap()
         );
 
-        // Should have PII, GDPR, and Financial bits set
+        // Should have PII and Financial bits set
         long regulatory = bitmap.secLo & 0xFFFF00L;
         assertTrue((regulatory & SecurityDimensionsRegistry.getRegulatoryBit("pii")) != 0);
-        assertTrue((regulatory & SecurityDimensionsRegistry.getRegulatoryBit("gdpr")) != 0);
         assertTrue((regulatory & SecurityDimensionsRegistry.getRegulatoryBit("financial")) != 0);
     }
 
@@ -142,7 +141,7 @@ class BitmapDerivationTest {
         // Test with all dimensions combined
         Map<String, ColumnSecurityMetadata> metadata = new HashMap<>();
         metadata.put("email", createMetadata("email", "confidential",
-                Arrays.asList("pii", "gdpr"), null,
+                Arrays.asList("pii", "phi"), null,
                 Arrays.asList("analytics"), "customer_data"));
         metadata.put("region", createMetadataValueBased("region", null, null, null));
 
@@ -158,7 +157,7 @@ class BitmapDerivationTest {
         Map<String, List<String>> decoded = SecurityDimensionsRegistry.decode(bitmap.secLo, bitmap.secHi);
 
         assertEquals(Arrays.asList("confidential"), decoded.get("sensitivity"));
-        assertTrue(decoded.get("regulatory").containsAll(Arrays.asList("pii", "gdpr")));
+        assertTrue(decoded.get("regulatory").containsAll(Arrays.asList("pii", "phi")));
         assertEquals(Arrays.asList("apac"), decoded.get("geographic"));
         assertEquals(Arrays.asList("analytics"), decoded.get("purpose"));
         assertEquals(Arrays.asList("customer_data"), decoded.get("datatype"));

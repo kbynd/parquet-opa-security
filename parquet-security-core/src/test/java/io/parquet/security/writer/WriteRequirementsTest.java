@@ -21,7 +21,7 @@ class WriteRequirementsTest {
                 .named("employees");
 
         Map<String, String> fileMetadata = new HashMap<>();
-        fileMetadata.put("column.email.security.write.min_clearance", "pii,gdpr");
+        fileMetadata.put("column.email.security.write.min_clearance", "pii");
         fileMetadata.put("column.email.security.write.required_roles", "data_engineer,admin");
         fileMetadata.put("column.salary.security.min_sensitivity", "confidential");
         fileMetadata.put("column.salary.security.max_sensitivity", "restricted");
@@ -34,7 +34,7 @@ class WriteRequirementsTest {
         WriteRequirements emailReq = requirements.get("email");
         assertNotNull(emailReq);
         assertEquals("email", emailReq.getColumnName());
-        assertEquals(Arrays.asList("pii", "gdpr"), emailReq.getRequiredRegulatoryScopes());
+        assertEquals(Arrays.asList("pii"), emailReq.getRequiredRegulatoryScopes());
         assertEquals(Arrays.asList("data_engineer", "admin"), emailReq.getRequiredRoles());
         assertNull(emailReq.getMinSensitivity());
         assertNull(emailReq.getMaxSensitivity());
@@ -185,7 +185,7 @@ class WriteRequirementsTest {
                 .named("test");
 
         Map<String, String> fileMetadata = new HashMap<>();
-        fileMetadata.put("column.data.security.write.min_clearance", "pii, gdpr, financial");
+        fileMetadata.put("column.data.security.write.min_clearance", "pii, phi, financial");
         fileMetadata.put("column.data.security.write.required_roles", "admin");
 
         Map<String, WriteRequirements> requirements =
@@ -193,7 +193,7 @@ class WriteRequirementsTest {
 
         WriteRequirements dataReq = requirements.get("data");
         assertNotNull(dataReq);
-        assertEquals(Arrays.asList("pii", "gdpr", "financial"), dataReq.getRequiredRegulatoryScopes());
+        assertEquals(Arrays.asList("pii", "phi", "financial"), dataReq.getRequiredRegulatoryScopes());
         assertEquals(Arrays.asList("admin"), dataReq.getRequiredRoles());
     }
 
@@ -201,7 +201,7 @@ class WriteRequirementsTest {
     void testToString() {
         WriteRequirements requirements = new WriteRequirements(
                 "email",
-                Arrays.asList("pii", "gdpr"),
+                Arrays.asList("pii", "phi"),
                 Arrays.asList("admin"),
                 "confidential",
                 "restricted",
@@ -213,7 +213,7 @@ class WriteRequirementsTest {
         String str = requirements.toString();
         assertTrue(str.contains("email"));
         assertTrue(str.contains("pii"));
-        assertTrue(str.contains("gdpr"));
+        assertTrue(str.contains("phi"));
         assertTrue(str.contains("admin"));
         assertTrue(str.contains("confidential"));
         assertTrue(str.contains("restricted"));

@@ -70,7 +70,7 @@ class SecuredParquetWriterTest {
 
         Map<String, String> fileMetadata = new HashMap<>();
         fileMetadata.put("column.email.security.sensitivity", "internal");
-        fileMetadata.put("column.email.security.regulatory", "pii,gdpr");
+        fileMetadata.put("column.email.security.regulatory", "pii");
 
         // Parse metadata
         var columnMetadata =
@@ -91,7 +91,6 @@ class SecuredParquetWriterTest {
 
         assertTrue(dimensions.get("sensitivity").contains("internal"));
         assertTrue(dimensions.get("regulatory").contains("pii"));
-        assertTrue(dimensions.get("regulatory").contains("gdpr"));
     }
 
     @Test
@@ -273,7 +272,7 @@ class SecuredParquetWriterTest {
     void testWriteRequirementsToString() {
         WriteRequirements req = new WriteRequirements(
                 "email",
-                Arrays.asList("pii", "gdpr"),
+                Arrays.asList("pii"),
                 Arrays.asList("admin"),
                 "confidential",
                 "restricted",

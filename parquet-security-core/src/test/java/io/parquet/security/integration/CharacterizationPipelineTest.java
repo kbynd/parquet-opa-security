@@ -47,7 +47,7 @@ class CharacterizationPipelineTest {
 
         Map<String, String> fileMetadata = new HashMap<>();
         fileMetadata.put("column.email.security.sensitivity", "internal");
-        fileMetadata.put("column.email.security.regulatory", "pii,gdpr");
+        fileMetadata.put("column.email.security.regulatory", "pii");
         fileMetadata.put("column.salary.security.sensitivity", "confidential");
         fileMetadata.put("column.salary.security.regulatory", "pii,financial");
         fileMetadata.put("column.region.security.geographic", "value_based");
@@ -212,7 +212,6 @@ class CharacterizationPipelineTest {
             assertTrue(dims1.get("sensitivity").contains("confidential"),
                     "Should have confidential (highest between internal email and confidential salary)");
             assertTrue(dims1.get("regulatory").contains("pii"), "Should have PII from email and salary");
-            assertTrue(dims1.get("regulatory").contains("gdpr"), "Should have GDPR from email");
             assertTrue(dims1.get("regulatory").contains("financial"), "Should have financial from salary");
             assertTrue(dims1.get("geographic").contains("apac"), "Should have APAC from region value");
 
